@@ -10,11 +10,11 @@ function App() {
 
   const [result, setResult] = useState<number | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = () => {
 
     const res = calculateIntegral(mathFunction, rectangleNum, lowerLimit, upperLimit);
     setResult(res);
+
   }
 
   return (
@@ -23,18 +23,32 @@ function App() {
         <h1>Integrals.js</h1>
       </div>  
       <div className="form-container">
+        
        <div className='integral'>
           <h1>∫</h1>
        </div>
        <div className='limits'>
-          <input type="number" className='upper'></input>
-          <input type="number" className='lower'></input>
+          <input type="number" className='upper'  onChange={ (e) => {setUpperLimit(parseInt(e.target.value))} }></input>
+          <input type="number" className='lower' onChange={ (e) => {setLowerLimit(parseInt(e.target.value))} }></input>
 
         </div> 
         <div className='function'>
-          <input type="text"></input>
+          <input type="text" onChange={(e) => { setMathFunction(e.target.value)} } ></input>
         </div>
+        <div className='differential'>
+          <h1>dx</h1>
+          </div>
+        <div className='equal'>
+          <h1 onClick={ (e) => { handleSubmit() } }>=</h1>
+        </div>
+      
+
       </div>
+      <div className='rectanglenum'>
+        <h1>rectangle nums</h1>
+        <input type="number" onChange={ (e) => {setRectangleNum(parseInt(e.target.value))} } />
+      </div>
+      
       { result ? <div className="result-container">
         <h2>Result: {result}</h2>
       </div> : null }

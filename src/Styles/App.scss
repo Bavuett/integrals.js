@@ -74,11 +74,39 @@ form {
 
 .function {
     display: flex;
+    width: 30%;
     align-items: center;
     padding-left: 0;
+    padding-right: 0;
     padding-top: 2%;
+    
     input{
         font-size: 3rem;
         border-radius: 8px;
+        width: 100%;
+    }
+}
+.differential {
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 2%;
+}   
+.equal{
+    display: flex;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+}
+.rectanglenum{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    h1{
+        font-size: 1.5rem;
     }
 }
