@@ -23,17 +23,17 @@ function App() {
         <h1>Integrals.js</h1>
       </div>  
       <div className="form-container">
-        <form onSubmit={ (e) => { handleSubmit(e) } }>
-          <label>Your function: </label>
-          <input type="text" name="function" onChange={(e) => { setMathFunction(e.target.value)} } />
-          <label>Number of rectangles: </label>
-          <input type="number" name="rectanglenum" onChange={ (e) => {setRectangleNum(parseInt(e.target.value))} }/>
-          <label>Lower limit of integration interval: </label>
-          <input type="number" name="lower" onChange={ (e) => {setLowerLimit(parseInt(e.target.value))} }/>
-          <label>Upper limit of integration interval: </label>
-          <input type="number" name="upper" onChange={ (e) => {setUpperLimit(parseInt(e.target.value))} }/>
-          <button>Submit</button>
-        </form>
+       <div className='integral'>
+          <h1>∫</h1>
+       </div>
+       <div className='limits'>
+          <input type="number" className='upper'></input>
+          <input type="number" className='lower'></input>
+
+        </div> 
+        <div className='function'>
+          <input type="text"></input>
+        </div>
       </div>
       { result ? <div className="result-container">
         <h2>Result: {result}</h2>
