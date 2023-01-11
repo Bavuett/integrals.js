@@ -41,7 +41,9 @@ function App() {
         <div className='equal'>
           <h1 onClick={ (e) => { handleSubmit() } }>=</h1>
         </div>
-      
+      { result ? <div className="result-container">
+        <h1>{result}</h1>
+      </div> : null }
 
       </div>
       <div className='rectanglenum'>
@@ -49,9 +51,7 @@ function App() {
         <input type="number" onChange={ (e) => {setRectangleNum(parseInt(e.target.value))} } />
       </div>
       
-      { result ? <div className="result-container">
-        <h2>Result: {result}</h2>
-      </div> : null }
+      
     </div>
   );
 };

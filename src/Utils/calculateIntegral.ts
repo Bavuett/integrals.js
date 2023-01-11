@@ -21,7 +21,7 @@ function calculateIntegral(mathFunc: string, rects: number, low: number, up: num
         const funcResult: number = evaluate(mathFunc, {x: point});
         result += funcResult * delta;
     });
-
+    result = ~~result;
     return result;
 }
 
