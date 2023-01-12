@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import calculateIntegral from './Utils/calculateIntegral';
 import './Styles/App.scss';
 
@@ -21,37 +21,32 @@ function App() {
     <div className="app">
       <div className="title-container">
         <h1>Integrals.js</h1>
-      </div>  
+      </div>
       <div className="form-container">
-        
-       <div className='integral'>
+        <div className='integral'>
           <h1>∫</h1>
-       </div>
-       <div className='limits'>
-          <input type="number" className='upper'  onChange={ (e) => {setUpperLimit(parseInt(e.target.value))} }></input>
-          <input type="number" className='lower' onChange={ (e) => {setLowerLimit(parseInt(e.target.value))} }></input>
-
-        </div> 
+        </div>
+        <div className='limits'>
+          <input type="number" className='upper' onChange={(e) => { setUpperLimit(parseInt(e.target.value)) }}></input>
+          <input type="number" className='lower' onChange={(e) => { setLowerLimit(parseInt(e.target.value)) }}></input>
+        </div>
         <div className='function'>
-          <input type="text" onChange={(e) => { setMathFunction(e.target.value)} } ></input>
+          <input type="text" onChange={(e) => { setMathFunction(e.target.value) }} ></input>
         </div>
         <div className='differential'>
           <h1>dx</h1>
-          </div>
-        <div className='equal'>
-          <h1 onClick={ (e) => { handleSubmit() } }>=</h1>
         </div>
-      { result ? <div className="result-container">
-        <h1>{result}</h1>
-      </div> : null }
-
+        <div className='equal'>
+          <h1 onClick={(e) => { handleSubmit() }}>=</h1>
+        </div>
+        {result ? <div className="result-container">
+          <h1>{result}</h1>
+        </div> : null}
       </div>
       <div className='rectanglenum'>
-        <h1>rectangle nums</h1>
-        <input type="number" onChange={ (e) => {setRectangleNum(parseInt(e.target.value))} } />
+        <h1>Numero di rettangoli</h1>
+        <input type="number" onChange={(e) => { setRectangleNum(parseInt(e.target.value)) }} />
       </div>
-      
-      
     </div>
   );
 };
