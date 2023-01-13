@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Inter';
-    src: local('Inter') url('../Fonts/Inter.ttf') format('truetype');
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -13,8 +8,14 @@ h1 {
     font-family: 'Inter', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .app {
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding: 1%;
 }
@@ -41,6 +42,10 @@ h1 {
     padding-right: 3%;
     font-size: 10rem;
     font-weight: 600;
+
+    h1 {
+        font-family: 'Inter', sans-serif;
+    }
 }
 
 .limits {
@@ -48,17 +53,16 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     width: 5%;
-    padding-top: 4%;
-    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
 
 
     input {
-
         width: 80%;
         font-size: 2rem;
-        ;
-        border-radius: 8px;
-
+        border: solid 1px black;
+        border-radius: 0px;
+        padding: 5px;
     }
 
 }
@@ -73,7 +77,9 @@ h1 {
 
     input {
         font-size: 3rem;
-        border-radius: 8px;
+        border: solid 1px black;
+        border-radius: 0px;
+        padding: 5px;
         width: 100%;
     }
 }
@@ -91,6 +97,18 @@ h1 {
     padding-left: 2%;
     padding-right: 2%;
     align-items: center;
+    cursor: pointer;
+
+    h1 {
+        padding: 10px;
+        border: solid 1px rgb(100, 100, 100);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    :hover {
+        background: grey;
+    }
 }
 
 .rectanglenum {
